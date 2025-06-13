@@ -23,6 +23,7 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
     int hasKey = 0;
+    boolean hasSword = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
 
@@ -150,7 +151,12 @@ public class Player extends Entity {
                         hasKey--;
                     }
                     System.out.println("Key: " + hasKey);
-                    break;     
+                    break;
+                case "Sword":
+                    hasSword = true;
+                    gp.obj[i] = null;
+                    System.out.println("Has Sword");
+                    break;
             }
             
         }
