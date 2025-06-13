@@ -22,7 +22,7 @@ public class Player extends Entity {
     
     public final int screenX;
     public final int screenY;
-    int hasKey = 0;
+    public int hasKey = 0;
     boolean hasSword = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
