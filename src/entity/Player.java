@@ -6,6 +6,7 @@ import java.io.*;
 import javax.imageio.*;
 import main.GamePanel;
 import main.KeyHandler;
+import object.*;
 
 /*♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪❤❤❤♪♪♪
 
@@ -24,6 +25,8 @@ public class Player extends Entity {
     public final int screenY;
     public int hasKey = 0;
     boolean hasSword = false;
+    boolean hasAxe = true;
+    int coins = 0;
 
     public Player(GamePanel gp, KeyHandler keyH) {
 
@@ -162,6 +165,14 @@ public class Player extends Entity {
                         gp.obj[i] = null;
                         
                     }
+                    break;
+                case "Chest1":
+                    coins += 5;
+                    gp.obj[i] = new OBJ_OpenChest();
+                    break;
+                case "Chest2":
+                    hasAxe = true;
+                    gp.obj[i] = new OBJ_OpenChest();
                     break;
             }
             
