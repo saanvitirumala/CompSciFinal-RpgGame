@@ -52,6 +52,18 @@ public class AssetSetter {
         gp.obj[7] = new OBJ_Sword();
         gp.obj[7].worldX = 37 * gp.tileSize;
         gp.obj[7].worldY = 42 * gp.tileSize;
+
+        gp.obj[8] = new OBJ_Monster1();
+        gp.obj[8].worldX = 37 * gp.tileSize;
+        gp.obj[8].worldY = 37 * gp.tileSize;
+
+        gp.obj[9] = new OBJ_Monster1();
+        gp.obj[9].worldX = 22 * gp.tileSize;
+        gp.obj[9].worldY = 38 * gp.tileSize;
+
+        gp.obj[10] = new OBJ_Monster1();
+        gp.obj[10].worldX = 38 * gp.tileSize;
+        gp.obj[10].worldY = 10 * gp.tileSize;
         
     }
 

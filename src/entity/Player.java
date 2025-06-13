@@ -157,6 +157,12 @@ public class Player extends Entity {
                     gp.obj[i] = null;
                     System.out.println("Has Sword");
                     break;
+                case "Monster1":
+                    if(hasSword){
+                        gp.obj[i] = null;
+                        
+                    }
+                    break;
             }
             
         }
