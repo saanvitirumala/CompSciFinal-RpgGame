@@ -25,8 +25,8 @@ public class Player extends Entity {
     public final int screenY;
     public int hasKey = 0;
     boolean hasSword = false;
-    boolean hasAxe = true;
-    int coins = 0;
+    boolean hasAxe = false;
+    public int coins = 0;
 
     public Player(GamePanel gp, KeyHandler keyH) {
 
@@ -162,17 +162,27 @@ public class Player extends Entity {
                     break;
                 case "Monster1":
                     if(hasSword){
-                        gp.obj[i] = null;
-                        
+                        coins += 5;
+                        SuperObject temp = new OBJ_Chest1();
+                        temp.worldX = gp.obj[i].worldX;
+                        temp.worldY = gp.obj[i].worldY;
+                        gp.obj[i] = temp;
                     }
                     break;
                 case "Chest1":
                     coins += 5;
-                    gp.obj[i] = new OBJ_OpenChest();
+                    SuperObject temp1 = new OBJ_OpenChest();
+                    temp1.worldX = gp.obj[i].worldX;
+                    temp1.worldY = gp.obj[i].worldY;
+                    gp.obj[i] = temp1;
                     break;
                 case "Chest2":
                     hasAxe = true;
-                    gp.obj[i] = new OBJ_OpenChest();
+                    System.out.println("Has Axe");
+                    SuperObject temp2 = new OBJ_OpenChest();
+                    temp2.worldX = gp.obj[i].worldX;
+                    temp2.worldY = gp.obj[i].worldY;
+                    gp.obj[i] = temp2;
                     break;
             }
             

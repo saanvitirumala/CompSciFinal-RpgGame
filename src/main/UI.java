@@ -29,6 +29,7 @@ public class UI {
         g2.setFont(arial_40);
         g2.setColor(Color.white);
         g2.drawString("Key = " + gp.player.hasKey, 50, 50);
+        g2.drawString("Coins = " + gp.player.coins, 50, 100);
         
     }
 
